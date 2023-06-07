@@ -16,6 +16,11 @@
   color: green;
   font-weight: bold;
 }
+
+.card-price {
+  color: green;
+  font-weight: bold;
+}
 .category button {
   border-radius: 0;
   width: 100%;

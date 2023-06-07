@@ -13,10 +13,11 @@
 }
 .home-page .card {
   background-color: rgba(128, 128, 128, 0.097);
-  width: 18.3rem;
+  width: 17.3rem;
 }
 .home-page .card-name-price {
   display: flex;
+  gap: 5px;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -78,4 +79,8 @@
   color: green;
   font-weight: bold;
   font-size: 20px !important;
+}
+
+.cart {
+  margin-top: 6px;
 }

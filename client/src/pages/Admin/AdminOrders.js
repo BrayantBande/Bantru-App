@@ -5,6 +5,7 @@ import AdminMenu from './../../components/Layout/AdminMenu';
 import Layout from '../../components/Layout/Layout';
 import { useAuth } from '../../context/auth';
 import { Select } from 'antd';
+import '../../styles/CardStyles.css';
 const { Option } = Select;
 
 const AdminOrders = () => {
@@ -44,7 +45,7 @@ const AdminOrders = () => {
   };
   return (
     <Layout title={'Todos los Pedidos Info'}>
-      <div className="row">
+      <div className="row container">
         <div className="col-md-3">
           <AdminMenu />
         </div>
@@ -91,10 +92,9 @@ const AdminOrders = () => {
                       <div className="col-md-4">
                         <img
                           src={`/api/v1/product/product-photo/${p._id}`}
-                          className="card-img-top"
+                          className="card-width"
                           alt={p.name}
-                          width="120px"
-                          height="160px"
+                          height="180px"
                         />
                       </div>
                       <div className="col-md-8">

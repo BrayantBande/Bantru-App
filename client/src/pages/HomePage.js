@@ -7,6 +7,7 @@ import { Prices } from '../components/Prices';
 import { useCart } from '../context/cart';
 import toast from 'react-hot-toast';
 import '../styles/Homepage.css';
+import '../styles/CardStyles.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -116,7 +117,7 @@ const HomePage = () => {
         className="banner-img"
         alt="bannerimage"
         width={'100%'}
-        height={'350px'}
+        height={'400px'}
       />
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-3 filters">
@@ -155,7 +156,7 @@ const HomePage = () => {
           <h1 className="text-center">BANTRU GBG - TIENDA ONLINE</h1>
           <div className="d-flex flex-wrap justify-content-center">
             {products?.map((p) => (
-              <div className="card m-2" key={p._id} height="100%">
+              <div className="card m-2 card-width" key={p._id} height="100%">
                 <img
                   src={`/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"

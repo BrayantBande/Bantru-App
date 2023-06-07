@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { GiShoppingBag } from 'react-icons/gi';
 import { useAuth } from '../../context/auth';
 import Toast from 'react-hot-toast';
 import SearchInput from '../Form/SearchInput';
@@ -126,7 +125,7 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item">
+              <li className="nav-item cart">
                 <Badge count={cart?.length} showZero>
                   <NavLink to="/cart" className="nav-link" href="#">
                     Carrito
