@@ -255,3 +255,23 @@ export const orderStatusController = async (req, res) => {
     });
   }
 };
+//order pago
+export const orderPagoController = async (req, res) => {
+  try {
+    const { orderId } = req.params;
+    const { pago } = req.body;
+    const orders = await orderModel.findByIdAndUpdate(
+      orderId,
+      { pago },
+      { new: true }
+    );
+    res.json(orders);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: 'Error al Actualizar Pedido',
+      error,
+    });
+  }
+};

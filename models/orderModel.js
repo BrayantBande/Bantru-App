@@ -13,6 +13,11 @@ const orderSchema = new mongoose.Schema(
       type: mongoose.ObjectId,
       ref: 'users',
     },
+    pago: {
+      type: String,
+      default: 'Procesando',
+      enum: ['Rechazada', 'Procesando', 'Recibido'],
+    },
     status: {
       type: String,
       default: 'No Procesada',

@@ -67,7 +67,6 @@ const ProductDetails = () => {
             })}
           </h6>
           <h6>Categoria : {product?.category?.name}</h6>
-          <h6>Cantidad Disponible : {product.quantity}</h6>
           <button
             class="btn btn-secondary ms-1"
             onClick={() => {

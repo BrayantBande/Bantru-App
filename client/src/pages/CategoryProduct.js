@@ -62,19 +62,6 @@ const CategoryProduct = () => {
                     >
                       Detalles
                     </button>
-                    <button
-                      class="btn btn-secondary ms-1"
-                      onClick={() => {
-                        setCart([...cart, p]);
-                        localStorage.setItem(
-                          'cart',
-                          JSON.stringify([...cart, p])
-                        );
-                        toast.success('Producto añadido Existosamente');
-                      }}
-                    >
-                      Añadir al Carrito
-                    </button>
                   </div>
                 </div>
               </div>

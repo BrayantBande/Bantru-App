@@ -14,10 +14,9 @@ const Contact = () => {
           />
         </div>
         <div className="col-md-4">
-          <h1 className="bg-dark p-2 text-white text-center">CONTACT US</h1>
+          <h1 className="bg-dark p-2 text-white text-center">CONTÁCTANOS</h1>
           <p className="text-justify mt-2">
-            any query and info abput product feel free to call anytime we 24/7
-            vaialible
+            Atendemos tus preguntas sobre compras, pagos, etc.
           </p>
           <p className="mt-3">
             <BiMailSend /> : inversionesbantru@gmail.com
@@ -26,7 +25,7 @@ const Contact = () => {
             <BiPhoneCall /> : 0414-1398228
           </p>
           <p className="mt-3">
-            <BiSupport /> : 1800-0000-0000 (toll free)
+            <BiPhoneCall /> : 0424-2194318
           </p>
         </div>
       </div>

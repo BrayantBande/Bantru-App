@@ -16,6 +16,7 @@ const AdminOrders = () => {
     'Entregando',
     'Cancelado',
   ]);
+  const [pago, setPago] = useState(['Rechazada', 'Procesando', 'Recibido']);
   const [changeStatus, setChangeStatus] = useState('');
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
@@ -43,6 +44,16 @@ const AdminOrders = () => {
       console.log(error);
     }
   };
+  const handleChangePago = async (orderId, value) => {
+    try {
+      const { data } = await axios.put(`/api/v1/auth/order-pago/${orderId}`, {
+        pago: value,
+      });
+      getOrders();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Layout title={'Todos los Pedidos Info'}>
       <div className="row container">
@@ -50,7 +61,7 @@ const AdminOrders = () => {
           <AdminMenu />
         </div>
         <div className="col-md-9">
-          <h1 className="text-center">Todos los Pedidos</h1>
+          <h1 className="text-center mt-4 mb-3">Todos los Pedidos</h1>
           {orders?.map((o, i) => {
             return (
               <div className="border shadow">
@@ -60,8 +71,9 @@ const AdminOrders = () => {
                       <th scope="col">#</th>
                       <th scope="col">Estado</th>
                       <th scope="col">Comprador</th>
+                      <th scope="col">Compra</th>
                       <th scope="col">Pago</th>
-                      <th scope="col">Cantidad</th>
+                      <th scope="col">Productos</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -81,7 +93,20 @@ const AdminOrders = () => {
                         </Select>
                       </td>
                       <td>{o?.buyer?.name}</td>
-                      <td>{o?.payment.success ? 'Realizado' : 'Fallido'}</td>
+                      <td>{o?.payment.success ? 'Realizada' : 'Fallida'}</td>
+                      <td>
+                        <Select
+                          bordered={false}
+                          onChange={(value) => handleChangePago(o._id, value)}
+                          defaultValue={o?.pago}
+                        >
+                          {pago.map((s, i) => (
+                            <Option key={i} value={s}>
+                              {s}
+                            </Option>
+                          ))}
+                        </Select>
+                      </td>
                       <td>{o?.products?.length}</td>
                     </tr>
                   </tbody>
