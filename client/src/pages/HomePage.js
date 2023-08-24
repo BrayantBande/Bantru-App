@@ -153,7 +153,10 @@ const HomePage = () => {
           </div>
         </div>
         <div className="col-md-9">
-          <h1 className="text-center">BANTRU GBG - TIENDA ONLINE</h1>
+          <h1 className="text-center">
+            <span className="blue">BANTRU GBG</span> <span> - </span>
+            <span className="blue2">TIENDA ONLINE</span>
+          </h1>
           <div className="d-flex flex-wrap justify-content-center">
             {products?.map((p) => (
               <div className="card m-2 card-width" key={p._id} height="100%">

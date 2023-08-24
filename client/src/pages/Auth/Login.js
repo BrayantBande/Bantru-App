@@ -42,7 +42,9 @@ const Login = () => {
     <Layout title={'Inicia Sesión - BANTRU APP'}>
       <div className="form-container">
         <form onSubmit={handleSubmit}>
-          <h4 className="title">INICIAR SESIÓN</h4>
+          <h4 className="title blue">
+            INICIAR <span className="blue2">SESIÓN</span>
+          </h4>
           <div className="mb-3">
             <input
               type="email"
@@ -68,7 +70,7 @@ const Login = () => {
           <div className="mb-3">
             <button
               type="button"
-              className="btn btn-primary"
+              className="btn btn-primary btn-bg"
               onClick={() => {
                 navigate('/forgot-password');
               }}
@@ -76,7 +78,7 @@ const Login = () => {
               Olvide la Contraseña
             </button>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary btn-bg">
             Iniciar Sesión
           </button>
         </form>

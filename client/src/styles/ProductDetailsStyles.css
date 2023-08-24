@@ -52,3 +52,12 @@
 .comprar {
   margin-top: 2rem;
 }
+
+.borde {
+  border: 3px solid #2e3793;
+}
+
+.btn-comprar {
+  background-color: #3842a6 !important;
+  width: 11rem;
+}

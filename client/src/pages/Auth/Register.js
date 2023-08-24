@@ -40,9 +40,12 @@ const Register = () => {
 
   return (
     <Layout title={'Registrar - BANTRU APP'}>
-      <div className="form-container">
+      <div className="form-container py-4">
         <form onSubmit={handleSubmit}>
-          <h4 className="title">REGISTRATE</h4>
+          <h4 className="title blue">
+            REGIS<span className="blue2">TRATE</span>
+          </h4>
+
           <div className="mb-3">
             <input
               type="text"
@@ -109,7 +112,7 @@ const Register = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary btn-bg">
             Registrarme
           </button>
         </form>

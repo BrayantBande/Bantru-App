@@ -48,10 +48,10 @@ const ProductDetails = () => {
         <div className="col-md-6">
           <img
             src={`/api/v1/product/product-photo/${product._id}`}
-            className="card-img-top"
+            className="card-img-top borde"
             alt={product.name}
             height="500"
-            width={'350px'}
+            width={'300px'}
           />
         </div>
         <div className="col-md-6 product-details-info">
@@ -68,7 +68,7 @@ const ProductDetails = () => {
           </h6>
           <h6>Categoria : {product?.category?.name}</h6>
           <button
-            class="btn btn-secondary ms-1"
+            class="btn btn-secondary ms-1 btn-comprar"
             onClick={() => {
               setCart([...cart, product]);
               localStorage.setItem('cart', JSON.stringify([...cart, product]));

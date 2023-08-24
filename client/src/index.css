@@ -56,21 +56,21 @@
 /* Footer */
 
 .footer {
-  color: white;
+  color: black;
   padding: 25px;
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
+  background: #828282;
+  background: -webkit-linear-gradient(to right, #ffffff, #838383);
+  background: linear-gradient(to right, #fffdfd, #838383);
 }
 
 .footer a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 10px;
 }
 
 .footer a:hover {
-  color: #ffefba;
+  color: #838383;
   border-bottom: 1px solid #ffefba;
 }
 
